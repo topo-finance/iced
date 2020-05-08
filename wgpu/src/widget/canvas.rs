@@ -27,7 +27,7 @@ mod program;
 mod stroke;
 mod text;
 
-pub use cache::Cache;
+pub use cache::{Cache, State};
 pub use cursor::Cursor;
 pub use event::Event;
 pub use fill::Fill;
