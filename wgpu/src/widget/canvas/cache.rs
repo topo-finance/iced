@@ -66,7 +66,7 @@ impl Cache {
     /// [`Cache`]: struct.Cache.html
     pub fn draw(&self, bounds: Size, draw_fn: impl Fn(&mut Frame)) -> Geometry {
         use std::ops::Deref;
-
+        println!("drawe bounds : {:?}", bounds);
         if let State::Filled {
             bounds: cached_bounds,
             primitive,
