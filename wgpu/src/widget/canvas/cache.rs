@@ -7,7 +7,7 @@ use crate::{
 use iced_native::Size;
 use std::{cell::RefCell, sync::Arc};
 
-enum State {
+pub enum State {
     Empty,
     Filled {
         bounds: Size,
@@ -30,7 +30,7 @@ impl Default for State {
 /// [`Geometry`]: struct.Geometry.html
 #[derive(Debug, Default, Clone)]
 pub struct Cache {
-    state: Rc<RefCell<State>>,
+    pub state: Rc<RefCell<State>>,
 }
 
 impl Cache {
