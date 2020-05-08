@@ -28,8 +28,10 @@ impl Default for State {
 /// [`Layer`]: ../trait.Layer.html
 /// [`Cache`]: struct.Cache.html
 /// [`Geometry`]: struct.Geometry.html
+
 #[derive(Debug, Default, Clone)]
 pub struct Cache {
+    /// rc counted ref cell to State
     pub state: Rc<RefCell<State>>,
 }
 
