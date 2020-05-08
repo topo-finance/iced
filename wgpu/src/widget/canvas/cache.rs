@@ -92,6 +92,7 @@ impl Cache {
             bounds,
             primitive: primitive.clone(),
         };
+        println!("drawe bounds end: {:?}", self.state);
 
         Geometry::from_primitive(Primitive::Cached { cache: primitive })
     }
