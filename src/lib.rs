@@ -205,6 +205,7 @@ pub use element::Element;
 pub use executor::Executor;
 pub use sandbox::Sandbox;
 pub use settings::Settings;
+pub use iced_wgpu;
 
 #[cfg(not(target_arch = "wasm32"))]
 use iced_winit as runtime;
