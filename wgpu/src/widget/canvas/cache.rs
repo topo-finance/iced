@@ -1,3 +1,4 @@
+use std::rc::Rc;
 use crate::{
     canvas::{Frame, Geometry},
     Primitive,
@@ -27,9 +28,9 @@ impl Default for State {
 /// [`Layer`]: ../trait.Layer.html
 /// [`Cache`]: struct.Cache.html
 /// [`Geometry`]: struct.Geometry.html
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub struct Cache {
-    state: RefCell<State>,
+    state: Rc<RefCell<State>>,
 }
 
 impl Cache {
